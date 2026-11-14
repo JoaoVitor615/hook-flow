@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/JoaoVitor615/hook-flow/internal/api"
+)
 
 func main() {
-	fmt.Println("API is running!")
+	server := api.NewServer()
+	server.InitHandlers()
+	
 }
